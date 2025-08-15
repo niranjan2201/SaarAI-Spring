@@ -89,6 +89,7 @@ public class ResearchService {
                 break;
 
 
+
             case "suggest":
                 prompt.append("Based on the following content: suggest related topics and further reading. ")
                         .append("Format the response in markdown with clear headings (##) and bullet points (*). ")
