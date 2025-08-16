@@ -12,7 +12,7 @@ public class ResearchController {
 
     private final ResearchService researchService;
 
-    @PostMapping
+    @PostMapping("/process")
     public ResponseEntity<String> processContent(@RequestBody ResearchRequest request){
         String result = researchService.processContent(request);
         return ResponseEntity.ok(result);
