@@ -10,6 +10,6 @@ FROM eclipse-temurin:21-jdk
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 
-# Render will assign PORT dynamically
-EXPOSE 8008
-ENTRYPOINT ["java", "-jar", "app.jar", "--server.port=$PORT"]
+# Render assigns PORT dynamically
+EXPOSE 8080
+CMD java -jar app.jar --server.port=$PORT
